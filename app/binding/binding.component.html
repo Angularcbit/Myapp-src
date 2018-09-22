@@ -1,0 +1,19 @@
+<!-- Property binding -->
+<div>
+  <label for="">Username:</label>
+  <input type="text" [value]="propertyBindingData">  //view
+</div>
+
+<!-- Event Binding -->
+<div>
+    <label for="">Password:</label>
+    <input type="text" value="" (keyup)="onChangeHandler()" #myvar >  //view
+    <span>{{eventBindingData}}</span>
+</div>
+
+<!-- Twoway binding using ngModel -->
+
+<div>
+  <label for="">Email:</label>
+  <input type="text" [(ngModel)]="email"  (keyup)="onUpdate()">
+</div>
