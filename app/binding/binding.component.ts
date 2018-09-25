@@ -9,15 +9,29 @@ export class BindingComponent{
 
   propertyBindingData = "Hello World!" //model;
   eventBindingData; //model
-  myvar;
   email = "myname@example.com";
+  btnColorStatus = false;
+  activeStatus = false;
+  rowSpanVal = 2;
 
-  onChangeHandler(){
-      console.log(this.myvar)
+  onChangeHandler(myvar){
+    this.eventBindingData = myvar
+      console.log(myvar)
   }
 
   onUpdate(){
     console.log(this.email)
+  }
+
+  changeColor(){
+      if(this.btnColorStatus)
+      this.btnColorStatus = false;
+      else
+      this.btnColorStatus = true;      
+  }
+
+  onData(){
+    this.activeStatus = true;
   }
 
 }
