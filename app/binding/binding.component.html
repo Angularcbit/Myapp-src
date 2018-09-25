@@ -7,7 +7,7 @@
 <!-- Event Binding -->
 <div>
     <label for="">Password:</label>
-    <input type="text" value="" (keyup)="onChangeHandler()" #myvar >  //view
+    <input type="text" value="" (keyup)="onChangeHandler(myvar.value)" #myvar  >  //view
     <span>{{eventBindingData}}</span>
 </div>
 
@@ -15,5 +15,53 @@
 
 <div>
   <label for="">Email:</label>
-  <input type="text" [(ngModel)]="email"  (keyup)="onUpdate()">
+  <input type="text" 
+        
+        [(ngModel)]="email"  (keyup)="onUpdate()">
 </div>
+
+
+<!-- Class Binding -->
+<button class="btn btn-primary"
+        [class.btn-success]="btnColorStatus"
+        (click)="changeColor()">Toggle</button>
+
+<!-- Style Binding -->
+<input type="text" 
+        [style.border]="activeStatus?'5px solid green':'5px solid red'"
+        (keyup)="onData()">
+
+<br><br>
+<!-- attribute binding -->
+<input type="text" value="kiran">
+
+<table border="1" align="center" width="30%" height="200">
+  <thead>
+    <tr>
+      <th>S.No</th>
+      <th>Year</th>
+      <th>Population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td [attr.rowspan]= "rowSpanVal">1</td>
+      <td>2015</td>
+      <td>700cr</td>
+    </tr>
+    <tr>
+      
+      <td>2016</td>
+      <td>705cr</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>2017</td>
+      <td>710cr</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
