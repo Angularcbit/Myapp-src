@@ -8,13 +8,19 @@ import { YourcompComponent } from './yourcomp/yourcomp.component';
 import { PersonComponent } from './person/person.component';
 import { BindingComponent } from './binding/binding.component';
 
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     MyComponent,
     YourcompComponent,
     PersonComponent,
-    BindingComponent
+    BindingComponent,
+
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
