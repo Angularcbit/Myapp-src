@@ -5,14 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './parent.component.html',
   styleUrls: ['./parent.component.css']
 })
-export class ParentComponent{
+export class ParentComponent {
 
-  //fields
-    data = 5;
 
-  // methods
-  onChildUpdates(){
-    console.log("change detected");
+  onChildUpdates($event){
+    console.log("Change Detected!");
+    console.log($event.count);
   }
+
 
 }

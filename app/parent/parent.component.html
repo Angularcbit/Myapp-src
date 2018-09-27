@@ -1,4 +1,2 @@
-<app-child [counter] = 'data'
-            (mychange)="onChildUpdates()">
-          </app-child>
-
+<app-child [count]="5"
+            (mychange)="onChildUpdates($event)"></app-child>
