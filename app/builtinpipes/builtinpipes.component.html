@@ -1,0 +1,20 @@
+<h2>
+    {{title | uppercase | lowercase}}
+    <small>{{subtitle | lowercase}}</small>
+
+    <div>
+      {{data | date:'medium'}}
+    </div>
+
+    <div>
+      {{price | number:'3.3-6'}}
+    </div>
+
+    <div>
+      {{commision | percent:'2.3-5'}}
+    </div>
+
+    <div>
+      {{db | json}}
+    </div>
+</h2>
