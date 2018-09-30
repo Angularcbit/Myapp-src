@@ -10,6 +10,9 @@ import { BindingComponent } from './binding/binding.component';
 
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { CustompipePipe } from './custompipe.pipe';
+import { CustompipeComponent } from './custompipe/custompipe.component';
+import { BuiltindirectivesComponent } from './builtindirectives/builtindirectives.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { ChildComponent } from './child/child.component';
     BindingComponent,
 
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    CustompipePipe,
+    CustompipeComponent,
+    BuiltindirectivesComponent
   ],
   imports: [
     BrowserModule,
