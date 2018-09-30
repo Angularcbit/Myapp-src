@@ -8,10 +8,11 @@ import { YourcompComponent } from './yourcomp/yourcomp.component';
 import { PersonComponent } from './person/person.component';
 import { BindingComponent } from './binding/binding.component';
 import { ChildComponent } from './child/child.component';
+import { CustompipePipe } from './custompipe.pipe';
+import { CustompipeComponent } from './custompipe/custompipe.component';
+import { BuiltindirectivesComponent } from './builtindirectives/builtindirectives.component';
 import { ParentComponent } from './parent/parent.component';
 import { BuiltinpipesComponent } from './builtinpipes/builtinpipes.component';
-
-
 
 @NgModule({
   declarations: [
@@ -22,6 +23,11 @@ import { BuiltinpipesComponent } from './builtinpipes/builtinpipes.component';
     BindingComponent,
     ChildComponent,
     ParentComponent,
+
+    ChildComponent,
+    CustompipePipe,
+    CustompipeComponent,
+    BuiltindirectivesComponent,
     BuiltinpipesComponent,
 
   ],
