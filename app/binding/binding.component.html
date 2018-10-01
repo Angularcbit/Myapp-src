@@ -26,10 +26,27 @@
         [class.btn-success]="btnColorStatus"
         (click)="changeColor()">Toggle</button>
 
+<button class="btn btn-primary"
+        
+        [ngClass] = "{
+          'btn-success': 'btnColorStatus',
+          'btn-lg': btnColorStatus
+        }"
+        (click)="changeColor()">Toggle</button>
+
 <!-- Style Binding -->
 <input type="text" 
         [style.border]="activeStatus?'5px solid green':'5px solid red'"
         (keyup)="onData()">
+
+<div
+    [ngStyle]="{
+      'width': activeStatus? '100px' : '300px',
+      'height': activeStatus? '100px': '200px',
+      'background-color': activeStatus ? '#897897': '#ff4578'
+    }">This is a box</div>
+
+    
 
 <br><br>
 <!-- attribute binding -->

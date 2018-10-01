@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class BuiltindirectivesComponent {
 
-  show=false;
+  show=true;
   choice = 100;
   selectdata=0;
   color='';
