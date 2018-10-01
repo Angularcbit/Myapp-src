@@ -13,6 +13,8 @@ import { ChildComponent } from './child/child.component';
 import { CustompipePipe } from './custompipe.pipe';
 import { CustompipeComponent } from './custompipe/custompipe.component';
 import { BuiltindirectivesComponent } from './builtindirectives/builtindirectives.component';
+import { CustomdirectiveDirective } from './customdirective.directive';
+import { CustomdComponent } from './customd/customd.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { BuiltindirectivesComponent } from './builtindirectives/builtindirective
     ChildComponent,
     CustompipePipe,
     CustompipeComponent,
-    BuiltindirectivesComponent
+    BuiltindirectivesComponent,
+    CustomdirectiveDirective,
+    CustomdComponent
   ],
   imports: [
     BrowserModule,
