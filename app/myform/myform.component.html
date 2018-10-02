@@ -1,0 +1,26 @@
+<form action="" method="GET">
+
+  <div class="form-group offset-3 col-md-4">
+    <label for="">username:</label>
+    <input class = "form-control" type="text" 
+           ngModel name="uname"  
+           (change)="onChange(username)"
+           #username = "ngModel"
+           required
+           minLength="30">
+    <div *ngIf="username.touched && !username.valid">
+      <p *ngIf="username.errors.required" class="alert alert-danger">Username Cannot Be Empty</p>      
+    </div>
+  </div>
+
+  <div class="form-group offset-3 col-md-4">
+    <label for="">password:</label>
+    <input class = "form-control" type="password">
+  </div>
+
+  <div class="form-group offset-3 col-md-4">
+    <input type="submit" class="btn btn-primary">
+  </div>
+
+
+</form>

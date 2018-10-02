@@ -13,6 +13,7 @@ import { BuiltindirectivesComponent } from './builtindirectives/builtindirective
 import { CustomdirectiveDirective } from './customdirective.directive';
 import { CustomdComponent } from './customd/customd.component';
 import { ParentComponent } from './parent/parent.component';
+import { MyformComponent } from './myform/myform.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ParentComponent } from './parent/parent.component';
     CustompipeComponent,
     BuiltindirectivesComponent,
     CustomdirectiveDirective,
-    CustomdComponent
+    CustomdComponent,
+    MyformComponent
   ],
   imports: [
     BrowserModule,
