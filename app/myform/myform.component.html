@@ -1,0 +1,64 @@
+<form action="" method="GET" 
+          name = "myform"
+          #myform = "ngForm"
+          (ngSubmit)="onSubmit(myform)">
+
+  <div class="form-group offset-3 col-md-4">
+    <label for="">username:</label>
+    <input class = "form-control" type="text" 
+           ngModel name="uname"  
+           (change)="onChange(username)"
+           #username = "ngModel"
+           required
+           minLength="30">
+    <div *ngIf="username.touched && !username.valid">
+      <p *ngIf="username.errors.required" class="alert alert-danger">Username Cannot Be Empty</p>      
+    </div>
+  </div>
+
+  <div class="form-group offset-3 col-md-4">
+    <label for="">password:</label>
+    <input class = "form-control" type="password"
+    ngModel name="password"  
+    (change)="onChange(password)"
+    #password = "ngModel"
+    required>
+  </div>
+
+  <div class="offset-3 col-md-4">
+    <div class="form-check form-check-inline">
+      
+      <input type="checkbox" class="form-check-input" ngModel name="javascript">
+      <label for="" class="form-check-label">JS</label>
+    </div>
+    <div class="form-check form-check-inline">
+      
+      <input type="checkbox" class="form-check-input" ngModel name="Angular">
+      <label for="" class="form-check-label">Angular</label>
+    </div>
+  </div>
+
+  <!-- <div class="form-group offset-3 col-md-4">
+      <div class="form-check form-check-inline">
+          <input type="radio" class="form-check-input" ngModel name="gender" id="male">
+          <label for="male" class="form-check-label">Male</label>
+      </div>
+      <div class="form-check form-check-inline">
+          <input type="radio" class="form-check-input" ngModel name="gender" id="female">
+          <label for="female" class="form-check-label">Female</label>
+      </div>
+  </div> -->
+
+  <div class=" offset-3 col-md-4">
+    <input type="radio" ngModel name="gender" value="M"> <label for="">Male</label>
+    <input type="radio" ngModel name="gender" value="F"> <label for="">female</label>
+  </div>
+
+  <div class="form-group offset-3 col-md-4">
+    <input type="submit" class="btn btn-success" [disabled]="!myform.valid">
+  </div>
+
+  {{myform.value | json}}
+
+
+</form>
