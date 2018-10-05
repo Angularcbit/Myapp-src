@@ -1,0 +1,28 @@
+<form action="" method="GET" 
+          name = "myform"
+          novalidate
+          [formGroup]="form">
+
+  <div class="form-group offset-3 col-md-4">
+    <label for="">username:</label>
+    <input class = "form-control" type="text" 
+           formControlName="username"
+           (change)="onChange()">
+    <div *ngIf="username.touched && !username.valid">
+      <p *ngIf="username.errors.required" class="alert alert-danger">Username Cannot Be Empty</p>      
+    </div>    
+  </div>
+
+  <div class="form-group offset-3 col-md-4">
+    <label for="">password:</label>
+    <input class = "form-control" type="password"
+    formControlName = "password"
+    (change) = "onChange()" >
+    <div *ngIf="password.touched && !password.valid">
+      <p *ngIf="password.errors.required" class="alert alert-danger">password Cannot Be Empty</p>      
+    </div>
+    
+  </div>
+
+  <input type="submit" value="submit" class="btn btn-primary form-group offset-3 col-md-4">
+</form>

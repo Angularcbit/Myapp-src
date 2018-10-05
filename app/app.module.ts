@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms'
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 import { AppComponent } from './app.component';
 import {MyComponent} from '../mycomp/mycomp.component';
 import { YourcompComponent } from './yourcomp/yourcomp.component';
@@ -14,6 +14,7 @@ import { CustomdirectiveDirective } from './customdirective.directive';
 import { CustomdComponent } from './customd/customd.component';
 import { ParentComponent } from './parent/parent.component';
 import { MyformComponent } from './myform/myform.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 
 @NgModule({
   declarations: [
@@ -31,11 +32,13 @@ import { MyformComponent } from './myform/myform.component';
     BuiltindirectivesComponent,
     CustomdirectiveDirective,
     CustomdComponent,
-    MyformComponent
+    MyformComponent,
+    ReactiveformComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
