@@ -15,6 +15,12 @@ import { CustomdComponent } from './customd/customd.component';
 import { ParentComponent } from './parent/parent.component';
 import { MyformComponent } from './myform/myform.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { MenucompComponent } from './menucomp/menucomp.component';
+import { HttpClient } from 'selenium-webdriver/http';
+import { HttpClientModule } from '@angular/common/http';
+import { MenuegComponent } from './menueg/menueg.component';
+import { Http, HttpModule } from '@angular/http';
+
 
 @NgModule({
   declarations: [
@@ -33,12 +39,16 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
     CustomdirectiveDirective,
     CustomdComponent,
     MyformComponent,
-    ReactiveformComponent
+    ReactiveformComponent,
+    MenucompComponent,
+    MenuegComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

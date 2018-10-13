@@ -1,0 +1,16 @@
+{
+ "status" : "sucess",
+ "menu":[{
+		"name":"HOME",
+		"action":"#"
+	},{
+		"name":"ABOUT",
+		"action":"about.html"
+	},{
+		"name":"CONTACT",
+		"action":"contact.html"
+	},{
+		"name":"SERVICE",
+		"action":"service.html"
+	}]
+}
